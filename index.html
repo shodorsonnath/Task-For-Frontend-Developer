@@ -20,6 +20,37 @@
     .onset-front {
       font-family: "Onest", sans-serif;
     }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #a556bb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #bebcbf;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
   </style>
 
 </head>
@@ -339,7 +370,7 @@
     <!-- popular course section end -->
 
     <!-- we Provide section-->
-    <section class="flex flex-col md:flex-row justify-center gap-10 lg:gap-48 md:gap-20 px-6 mt-5 md:px-20">
+    <section class="flex flex-col md:flex-row justify-center gap-10 lg:gap-10 md:gap-20 px-6 mt-5 md:px-20 lg:px-40">
       <div class="text-center md:text-left">
         <h1 class="text-3xl lg:text-6xl md:text-3xl font-bold mb-5 lg:mb-10 md:mb-5 mt-4">We Provide...</h1>
 
@@ -434,8 +465,15 @@
             top-notch, and the content is very engaging."</p>
         </div>
       </div>
+      <!-- dot -->
+      <div class="text-center mt-8">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+
     </section>
-    
 
   </main>
   <!-- footer section start -->
